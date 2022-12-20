@@ -1,0 +1,56 @@
+﻿@page
+@model RoomModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+  <h1>Pippo</h1>
+  <div class="row row-tile">
+    <div class="col-md-8 tile">
+      <div class="row row-tile text-white">
+
+        <div class="col-sm-3 col-xs-6 tile square ">
+          <div class="tile-content">
+            Poppo
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+@for (int i = 0; i < Model.Fibbonacci.Count; i++)
+{
+      <div class="col-md-2 col-lg-2 col-sm-2">
+        <label>
+          <input type="radio" name="product" selected checked class="card-input-element" />
+
+            <div class="card card-default card-input">
+              <div>@Model.Fibbonacci[i]</div>
+            </div>
+
+        </label>
+      </div>
+}
+      </div>
+      </div>
+
+@* 
+      <div class="col-md-4 col-lg-4 col-sm-4">
+        
+        <label>
+          <input type="radio" name="product" selected checked class="card-input-element" />
+
+            <div class="card card-default card-input">
+              <div class="card-header">Product A</div>
+            </div>
+
+        </label>
+        
+      </div> *@
